@@ -1,0 +1,33 @@
+// Make move
+void makeMove() {
+
+    int choice;
+
+    cout << "Player " << currentPlayer
+         << ", enter your move (1-9): ";
+
+    cin >> choice;
+
+    // Invalid number
+    if (choice < 1 || choice > 9) {
+
+        cout << "\nInvalid position! Please try again.\n";
+        makeMove();
+        return;
+    }
+
+    int row = (choice - 1) / 3;
+    int col = (choice - 1) % 3;
+
+    // Already occupied
+    if (board[row][col] == 'X' ||
+        board[row][col] == 'O') {
+
+        cout << "\nPosition already occupied! Try another.\n";
+        makeMove();
+    }
+    else {
+
+        board[row][col] = currentPlayer;
+    }
+}
