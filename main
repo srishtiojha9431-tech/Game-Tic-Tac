@@ -1,0 +1,20 @@
+// Main function
+int main() {
+
+    char replay;
+
+    do {
+
+        playGame();
+
+        cout << "\nDo you want to play again? (y/n): ";
+        cin >> replay;
+
+    } while (replay == 'y' || replay == 'Y');
+
+    cout << "\n=================================================\n";
+    cout << "              THANK YOU FOR PLAYING              \n";
+    cout << "=================================================\n";
+
+    return 0;
+}
