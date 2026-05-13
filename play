@@ -1,0 +1,52 @@
+// Play game
+void playGame() {
+
+    initializeBoard();
+
+    bool gameOver = false;
+
+    showTitle();
+    showInstructions();
+
+    while (!gameOver) {
+
+        displayBoard();
+
+        makeMove();
+
+        // Winner
+        if (checkWin()) {
+
+            displayBoard();
+
+            cout << "=================================================\n";
+            cout << "               PLAYER "
+                 << currentPlayer
+                 << " WINS THE GAME!               \n";
+            cout << "=================================================\n";
+
+            gameOver = true;
+        }
+
+        // Draw
+        else if (checkDraw()) {
+
+            displayBoard();
+
+            cout << "=================================================\n";
+            cout << "                    MATCH DRAW                   \n";
+            cout << "=================================================\n";
+
+            gameOver = true;
+        }
+
+        // Continue
+        else {
+
+            switchPlayer();
+
+            cout << "Next Turn: Player "
+                 << currentPlayer << "\n";
+        }
+    }
+}
