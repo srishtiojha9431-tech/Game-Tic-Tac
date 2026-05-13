@@ -1,0 +1,18 @@
+// Instructions
+void showInstructions() {
+
+    cout << "\nHOW TO PLAY:\n";
+    cout << "---------------------------------------------\n";
+    cout << "1. Choose a number from 1 to 9.\n";
+    cout << "2. The number represents the board position.\n";
+    cout << "3. Player X starts the game.\n";
+    cout << "4. First player to match 3 symbols wins.\n\n";
+
+    cout << "BOARD POSITIONS:\n\n";
+
+    cout << "     1 | 2 | 3\n";
+    cout << "    ---|---|---\n";
+    cout << "     4 | 5 | 6\n";
+    cout << "    ---|---|---\n";
+    cout << "     7 | 8 | 9\n\n";
+}
